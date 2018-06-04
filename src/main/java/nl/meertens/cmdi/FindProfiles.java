@@ -80,8 +80,8 @@ public class FindProfiles {
         
         Set<String> profiles = new HashSet<String>();
         
-        Pattern cr_rest = Pattern.compile("^.*"+CR_URI+"rest/registry/profiles/",Pattern.DOTALL);
-        Pattern cr_ext  = Pattern.compile("/xsd.*$",Pattern.DOTALL);
+        Pattern cr_rest = Pattern.compile("^.*"+CR_URI+"rest/registry/([0-9.x]+/)?profiles/",Pattern.DOTALL);
+        Pattern cr_ext  = Pattern.compile("/([0-9.x]+/)?xsd.*$",Pattern.DOTALL);
 
         XMLInputFactory2 xmlif = (XMLInputFactory2) XMLInputFactory2.newInstance();
         xmlif.configureForConvenience();
